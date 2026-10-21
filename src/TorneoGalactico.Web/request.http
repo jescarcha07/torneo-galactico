@@ -1,0 +1,28 @@
+@baseUrl = http://localhost:5000
+
+POST {{baseUrl}}/api/species
+Content-Type: application/json
+
+{ "name": "Zorgon", "powerLevel": 900, "specialAbility": "Rayo cósmico" }
+
+###
+POST {{baseUrl}}/api/species
+Content-Type: application/json
+
+{ "name": "Kryll", "powerLevel": 900, "specialAbility": "Veneno" }
+
+###
+GET {{baseUrl}}/api/species
+
+###
+# Copia los ids devueltos arriba
+POST {{baseUrl}}/api/battles
+Content-Type: application/json
+
+{ "fighterAId": "<id-zorgon>", "fighterBId": "<id-kryll>" }
+
+###
+POST {{baseUrl}}/api/battles/random
+
+###
+GET {{baseUrl}}/api/ranking
