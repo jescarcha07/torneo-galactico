@@ -19,9 +19,13 @@ builder.Services.AddScoped<RankingService>();
 // Errores
 builder.Services.AddProblemDetails();
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddCors(o => o.AddDefaultPolicy(p =>
+    p.WithOrigins("http://localhost:5055").AllowAnyHeader().AllowAnyMethod()));
+
 
 var app = builder.Build();
-
+// después de builder.Build():
+app.UseCors();
 app.UseExceptionHandler();
 app.UseDefaultFiles();   // sirve index.html en "/"
 app.UseStaticFiles();    // sirve wwwroot

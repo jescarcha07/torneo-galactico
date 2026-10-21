@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Torneo Galáctico</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Gran Torneo Galáctico</h1>
+        <p>Registro de especies, combates y ranking</p>
+    </header>
+
+    <div id="message" class="message" hidden></div>
+
+    <main>
+        <section class="card">
+            <h2>Registrar especie</h2>
+            <form id="species-form">
+                <label>Nombre <input name="name" required maxlength="100" /></label>
+                <label>Nivel de poder <input name="powerLevel" type="number" min="0" step="1" required /></label>
+                <label>Habilidad especial <input name="specialAbility" required maxlength="500" /></label>
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Combate</h2>
+            <div class="fight">
+                <select id="fighter-a" aria-label="Especie A"></select>
+                <span class="vs">VS</span>
+                <select id="fighter-b" aria-label="Especie B"></select>
+            </div>
+            <div class="actions">
+                <button id="fight-btn">Combatir</button>
+                <button id="random-btn" class="secondary">Combate aleatorio</button>
+            </div>
+            <p id="battle-result" class="result"></p>
+        </section>
+
+        <section class="card">
+            <h2>Ranking</h2>
+            <table>
+                <thead><tr><th>#</th><th>Especie</th><th>Poder</th><th>Victorias</th></tr></thead>
+                <tbody id="ranking-body"></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Especies registradas</h2>
+            <table>
+                <thead><tr><th>Nombre</th><th>Poder</th><th>Habilidad</th></tr></thead>
+                <tbody id="species-body"></tbody>
+            </table>
+        </section>
+
+        <section class="card wide">
+            <h2>Historial de combates</h2>
+            <table>
+                <thead><tr><th>Fecha</th><th>Combate</th><th>Ganador</th></tr></thead>
+                <tbody id="battles-body"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

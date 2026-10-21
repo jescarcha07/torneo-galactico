@@ -1,4 +1,4 @@
-@baseUrl = http://localhost:5000
+@baseUrl = http://localhost:5055
 
 POST {{baseUrl}}/api/species
 Content-Type: application/json
@@ -19,7 +19,7 @@ GET {{baseUrl}}/api/species
 POST {{baseUrl}}/api/battles
 Content-Type: application/json
 
-{ "fighterAId": "<id-zorgon>", "fighterBId": "<id-kryll>" }
+{ "fighterAId": "e351e2d2-912c-4ca9-83c4-b90bc2f001c6", "fighterBId": "37379454-d959-4a9e-85e2-c89e4bc3aca7" }
 
 ###
 POST {{baseUrl}}/api/battles/random
