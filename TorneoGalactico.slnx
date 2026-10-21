@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TorneoGalactico.Application/TorneoGalactico.Application.csproj" />
+    <Project Path="src/TorneoGalactico.Domain/TorneoGalactico.Domain.csproj" />
+    <Project Path="src/TorneoGalactico.Infrastructure/TorneoGalactico.Infrastructure.csproj" />
+    <Project Path="src/TorneoGalactico.Web/TorneoGalactico.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TorneoGalactico.IntegrationTests/TorneoGalactico.IntegrationTests.csproj" />
+    <Project Path="tests/TorneoGalactico.UnitTests/TorneoGalactico.UnitTests.csproj" />
+  </Folder>
+</Solution>
